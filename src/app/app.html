@@ -1,0 +1,44 @@
+<main>
+  <header class="page-header">
+    <p class="eyebrow">G33 Design System</p>
+    <h1>Angular Consumer</h1>
+    <p class="lead">
+      Les Web Components Stencil du Design System G33, consommés dans Angular 22 (standalone, Signals,
+      zoneless). Même bibliothèque que le
+      <a [href]="links.reactConsumer" target="_blank" rel="noopener noreferrer">React Consumer</a> :
+      aucune ligne du Design System n'est spécifique à un framework.
+    </p>
+  </header>
+
+  <div class="hero-section">
+    <!--
+      Valeurs statiques → attributs HTML en kebab-case (title-text).
+      Valeurs dynamiques → binding de propriété en camelCase ([ctaUrl]).
+    -->
+    <g33-hero-banner
+      title-text="Girondins33 Design System"
+      subtitle="Consommé depuis Angular"
+      image-url="https://raw.githubusercontent.com/petermikitsh/stencil-react/HEAD/hero.png"
+      image-alt="Stencil + Angular"
+      cta-label="Voir le Design System"
+      [ctaUrl]="links.designSystem"
+      cta-target="_blank"
+    />
+  </div>
+
+  <section class="hero-section" aria-labelledby="cms-title">
+    <h2 id="cms-title">Hero piloté par Storyblok</h2>
+    <app-hero-storyblok />
+  </section>
+
+  <app-latest-news />
+
+  <app-tokens-playground />
+
+  <footer class="page-footer">
+    <a [href]="links.designSystemDemo" target="_blank" rel="noopener noreferrer">Démo du Design System</a>
+    <a [href]="links.designSystem" target="_blank" rel="noopener noreferrer">Code du Design System</a>
+    <a [href]="links.reactConsumer" target="_blank" rel="noopener noreferrer">React Consumer</a>
+    <a [href]="links.angularConsumer" target="_blank" rel="noopener noreferrer">Code de cette app</a>
+  </footer>
+</main>
