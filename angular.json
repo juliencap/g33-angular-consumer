@@ -68,7 +68,12 @@
               "buildTarget": "g33-angular-consumer:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "prebundle": {
+              "exclude": ["girondins33-design-system"]
+            }
+          }
         },
         "test": {
           "builder": "@angular/build:unit-test"
